@@ -70,7 +70,7 @@ clangFunctionLexer = (completion, prefix) ->
     if info.args?
       displayText += "(#{info.args.join(', ')})"
       text += '(' + info.args.map((chunk) -> "${#{placeholderIndex++}:#{chunk}}").join(', ') + ')'
-    unless info.tpl? or info.args?
+    unless info.args?
       displayText += '()'
       text += '()'
     r =
